@@ -6,6 +6,187 @@
 }
 
 body {
+    position: relative;
     min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
     background-color: #fff8e5;
+}
+
+.background {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    bottom: 0;
+}
+
+.message {
+    max-width: min(50%, 1000px);
+    padding: 1rem;
+    position: relative;
+    width: max-content;
+    min-width: 300px;
+}
+
+.message__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.message__text {
+    top: 150px;
+    font-size: 4vw;
+    padding: 15%;
+    padding-right: 0;
+    font-family: "Rubik Bubbles";
+}
+
+.header {
+    margin-bottom: 10dvh;
+}
+
+.animals {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    width: 100%;
+}
+
+.animals__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.animals__img-wrapper {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.animals__img-wrapper:hover {
+    transform: scale(1.2);
+}
+
+.animals__img {
+    display: block;
+    aspect-ratio: 1;
+    width: 30vw;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.animals__svg {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    aspect-ratio: 1;
+}
+
+
+@media (min-width: 700px) {
+    .animals__img {
+        width: 20vw;
+    }
+    .animals {
+        justify-content: flex-end;
+        padding-right: 30vw;
+    }
+}
+@media (min-width: 800px) {
+    .header {
+        position: absolute;
+    }
+    .animals {
+        padding-top: 20vh;
+        padding-right: 5vw;
+    }
+    
+}
+@media (min-width: 900px) {
+    .message__text {
+        font-size: 2.5vw;
+        padding-top: 10%;
+    }
+    .animals__img {
+        width: 10vw;
+    }
+    .header {
+        position: absolute;
+    }
+    .animals {
+        padding-top: 20vh;
+        padding-right: 20vw;
+    }
+    
+}
+@media (min-width: 1200px) {
+    .animals {
+        padding-right: 37vw;
+    }
+}
+
+.animals__name {
+    color: black;
+    font-size: 24px;
+    text-align: center;
+}
+
+.animals a {
+    text-decoration: none;
+}
+
+.food {
+    position: relative;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.food h1 {
+    margin-bottom: 1rem;
+}
+.food h2 {
+    margin-bottom: 1rem;
+}
+.food :is(p, ul) {
+    margin-bottom: 1rem;
+}
+.food ul p {
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+.food > :last-child {
+    margin-bottom: 0;
+}
+
+.bone {
+    position: absolute;
+    width: 80px;
+    top: -25px;
+    right: -25px;
+}
+
+.foot {
+    width: 100px;
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+}
+
+.chapter {
+    margin-bottom: 2rem;
+}
+.chapter > :last-child {
+    margin-bottom: 0;
 }
