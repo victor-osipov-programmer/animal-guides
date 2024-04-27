@@ -153,12 +153,15 @@ body {
 }
 
 
-.food h1 {
+.food :is(h1, h2) {
+    margin-top: 2rem;
     margin-bottom: 1rem;
 }
-.food h2 {
-    margin-bottom: 1rem;
+
+.food h1:first-of-type {
+    margin-top: 0;
 }
+
 .food :is(p, ul) {
     margin-bottom: 1rem;
 }
